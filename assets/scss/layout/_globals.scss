@@ -13,12 +13,12 @@ body {
   background-color: $red;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-attachment: fixed;
 
   @include breakpoint(medium) {
     background-image: url(../images/bg-intro-desktop.png);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
   }
 }
 

@@ -144,7 +144,6 @@ body {
   background-color: #ff7a7a;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-attachment: fixed;
 }
 
 @media only screen and (min-width: 38.75em) {
@@ -152,6 +151,7 @@ body {
     background-image: url(../images/bg-intro-desktop.png);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
   }
 }
 
