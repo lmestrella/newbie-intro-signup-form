@@ -1,0 +1,22 @@
+// Colors - primary
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+// Colors - accent
+$blue: hsl(248, 32%, 49%);
+// Colors - neutral
+$dark-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+$white: hsl(0, 0%, 100%);
+
+// Typography
+$font-size: 16px;
+
+// Defaults
+$b-radius-size: 0.75em;
+$transition-speed: 150ms;
+
+// Breakpoints - 620px, 900px
+$breakpoints: (
+  "medium": "38.75em",
+  "large": "56.25em",
+);

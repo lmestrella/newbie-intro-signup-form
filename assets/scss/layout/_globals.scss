@@ -1,0 +1,75 @@
+.flex {
+  display: flex;
+
+  &-fd-col {
+    flex-direction: column;
+  }
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-image: url(../images/bg-intro-mobile.png);
+  background-color: $red;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+
+  @include breakpoint(medium) {
+    background-image: url(../images/bg-intro-desktop.png);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.main {
+  row-gap: 4em;
+  width: Min(34.1875em, 89%);
+  margin: 5.75em auto;
+
+  @include breakpoint(large) {
+    column-gap: 5%;
+    flex-direction: row;
+    align-items: center;
+    width: Min(70.5em, 89%);
+    margin: auto;
+  }
+}
+
+.intro,
+.signup {
+  @include breakpoint(large) {
+    flex: 1;
+  }
+}
+
+.intro {
+  row-gap: 1.25rem;
+
+  &__paragraph {
+    padding: 0 2%;
+
+    @include breakpoint(large) {
+      padding: 0;
+    }
+  }
+
+  @include breakpoint(large) {
+    row-gap: 2em;
+  }
+}
+
+.signup {
+  row-gap: 1.5em;
+
+  &__details,
+  &__form {
+    border-radius: $b-radius-size;
+    box-shadow: 0 0.5em 0 0 rgba($dark-blue, 0.25);
+  }
+
+  &__details {
+    background-color: $blue;
+    padding: 1.25em 15%;
+  }
+}

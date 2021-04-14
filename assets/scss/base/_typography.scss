@@ -1,0 +1,89 @@
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: $white;
+  letter-spacing: 0.02em;
+}
+
+.intro {
+  text-align: center;
+
+  &__title {
+    line-height: 1.4;
+    font-size: clamp(1.5rem, 7vw, 3rem);
+
+    @include breakpoint(large) {
+      line-height: 1.125;
+      font-size: clamp(2.5rem, 4vw, 3.05rem);
+    }
+  }
+
+  @include breakpoint(large) {
+    text-align: left;
+  }
+}
+
+.signup {
+  &__details {
+    text-align: center;
+    font-size: 0.95rem;
+
+    > span {
+      font-weight: 600;
+    }
+  }
+
+  &__field,
+  &__submit {
+    letter-spacing: inherit;
+  }
+
+  &__field {
+    font-weight: 600;
+    font-size: 0.875rem;
+
+    &::placeholder {
+      color: $dark-blue;
+    }
+
+    + .err-msg {
+      text-align: right;
+      color: $red;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    &--error[type="email"] {
+      color: red;
+    }
+  }
+
+  &__submit {
+    color: $white;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+  }
+
+  &__tos {
+    text-align: center;
+    color: $grayish-blue;
+
+    a {
+      color: $red;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+small {
+  font-size: 0.6875rem;
+}

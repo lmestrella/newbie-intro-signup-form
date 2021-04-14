@@ -1,0 +1,96 @@
+.signup {
+  &__form {
+    background-color: $white;
+    padding: 7%;
+
+    > *:not(:first-child):not(small.err-msg) {
+      // margin-top: 5.5%;
+      margin-top: 5.85%;
+
+      @include breakpoint(large) {
+        margin-top: 1.36em;
+      }
+    }
+
+    @include breakpoint(large) {
+      padding: 8% 7%;
+    }
+  }
+
+  &__field,
+  &__submit {
+    border-radius: $b-radius-size / 2;
+  }
+
+  &__field {
+    // border: 1px solid $grayish-blue;
+    padding: 1.18em 6%;
+    box-shadow: 0 0 0 1px $grayish-blue;
+
+    &[type="text"] {
+      text-transform: capitalize;
+    }
+
+    &::placeholder {
+      opacity: 0.75;
+    }
+
+    &:focus {
+      // border: 1px solid $blue;
+      box-shadow: 0 0 0 1px $blue;
+    }
+
+    &--error {
+      position: relative;
+
+      &::placeholder {
+        opacity: 0;
+      }
+
+      &,
+      &:focus {
+        // border: 2px solid $red;
+        box-shadow: 0 0 0 2px $red;
+      }
+    }
+
+    + .err-msg {
+      display: none;
+      position: relative;
+      margin-top: 0.4em;
+
+      &::after {
+        content: url(../images/icon-error.svg);
+        position: absolute;
+        top: -4em;
+        right: 2em;
+      }
+
+      &--visible {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__submit {
+    background-color: $green;
+    box-shadow: inset 0 -0.185em 0 1px rgba($blue, 0.15);
+    transition: $transition-speed opacity ease-in;
+    padding: 1em 6%;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__tos {
+    padding: 0 5%;
+  }
+}
+
+// input[type="email"].signup__field--error {
+//   &::placeholder {
+//     color: $red;
+//   }
+// }
