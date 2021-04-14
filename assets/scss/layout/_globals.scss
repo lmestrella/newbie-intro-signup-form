@@ -45,6 +45,11 @@ body {
 
 .intro {
   row-gap: 1.25rem;
+  align-items: center;
+
+  &__title {
+    width: Min(535px, 90%);
+  }
 
   &__paragraph {
     padding: 0 2%;
@@ -55,6 +60,7 @@ body {
   }
 
   @include breakpoint(large) {
+    align-items: flex-start;
     row-gap: 2em;
   }
 }
