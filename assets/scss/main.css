@@ -151,7 +151,6 @@ body {
     background-image: url(../images/bg-intro-desktop.png);
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
   }
 }
 
